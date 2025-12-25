@@ -13,7 +13,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const ProductViewer = () => {
     const { color, setColor, scale, setScale } = useMacbookStore();
-    const isMobile = useMediaQuery({query: 'max-width: 1024px'})
+    const isMobile = useMediaQuery({query: '(max-width: 1024px)'})
 
   return (
     <section id="product-viewer">
@@ -46,7 +46,7 @@ const ProductViewer = () => {
             <div
               onClick={() => setScale(0.06)}
               className={clsx(
-                'bg white text-black',
+                'bg-white text-black',
                 scale === 0.06
                   ? 'bg-white text black'
                   : 'bg-transparent text-white'
@@ -57,7 +57,7 @@ const ProductViewer = () => {
             <div
               onClick={() => setScale(0.08)}
               className={clsx(
-                'bg white text-black',
+                'bg-white text-black',
                 scale === 0.08
                   ? 'bg-white text black'
                   : 'bg-transparent text-white'
