@@ -4,13 +4,13 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 const Showcase = () => {
-    const isTablet = useMediaQuery({ query: '(max-width: 1024px' });
+    const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
 
     useGSAP(() => {
         if (!isTablet) {
             const timeline = gsap.timeline({
                 scrollTrigger: {
-                    triger: '#showcase',
+                    trigger: '#showcase',
                     start: 'top top',
                     end: 'bottom top',
                     scrub: 'true',
