@@ -13,10 +13,9 @@ const Showcase = () => {
                     trigger: '#showcase',
                     start: 'top top',
                     end: 'bottom top',
-                    scrub: 'true',
-                    pin: 'true',
-                },
-            });
+                    scrub: true,
+                    pin: true,
+                },            });
 
             timeline
                 .to('.mask img', {
@@ -31,9 +30,8 @@ const Showcase = () => {
             <div className="media">
                 <video src="/videos/game.mp4" loop muted autoPlay playsInline />
                 <div className="mask">
-                    <img src="/mask-logo.svg" />
-                </div>
-            </div>
+                    <img src="/mask-logo.svg" alt="Logo mask" />
+                </div>            </div>
 
             <div className="content">
                 <div className="wrapper">

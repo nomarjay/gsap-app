@@ -1,10 +1,8 @@
-//14 and 16 -> PresentationConrols 
-import { PresentationControls } from '@react-three/drei';
 import React from 'react';
 import { useRef } from 'react';
-
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { PresentationControls } from '@react-three/drei';
 
 
 import MacbookModel14 from '../models/Macbook-14.jsx';
