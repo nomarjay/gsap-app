@@ -17,6 +17,7 @@ const ModelScroll = () => {
     const { setTexture } = useMacbookStore();
 
     useEffect(() => {
+        const videos = [];
         featureSequence.forEach((feature) => {
             const v = document.createElement('video');
 
@@ -29,7 +30,16 @@ const ModelScroll = () => {
             });
 
             v.load();
+            videos.push(v);
         });
+
+        return () => {
+            videos.forEach(v => {
+                v.pause();
+                v.src = '';
+                v.load();
+            });
+        };
     }, []);
 
     useGSAP(() => {
