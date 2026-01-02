@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Highlights = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
@@ -18,8 +19,7 @@ const Highlights = () => {
       duration: 1,
       ease: 'power1.inOut'
     })
-  })
-
+  }, [])
     return (
         <section id="highlights">
             <h3>There’s never been a better time to upgrade.</h3>
@@ -64,8 +64,7 @@ const Highlights = () => {
                             <br /> <span>battery life.</span>
                             <span className="text-dark">
                                 {' '}
-                                (Up to 24ours total.).{' '}
-                            </span>
+                                (Up to 24 hours total.).{' '}                            </span>
                         </p>
                     </div>
                 </div>
